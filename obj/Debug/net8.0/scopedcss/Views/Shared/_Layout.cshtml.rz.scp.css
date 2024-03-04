@@ -1,0 +1,274 @@
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-fmedpabp6h] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-fmedpabp6h] {
+  color: #0077cc;
+}
+
+.btn-primary[b-fmedpabp6h] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-fmedpabp6h], .nav-pills .show > .nav-link[b-fmedpabp6h] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-fmedpabp6h] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-fmedpabp6h] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-fmedpabp6h] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-fmedpabp6h] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-fmedpabp6h] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+
+
+
+
+
+
+.dropmenu[b-fmedpabp6h]
+{
+  margin-right: 150px;
+  z-index: 1;
+}
+/* The design is inspired from the mockapi.io */
+
+.popup[b-fmedpabp6h] {
+  --burger-line-width: 1.125em;
+  --burger-line-height: 0.125em;
+  --burger-offset: 0.625em;
+  --burger-bg: rgba(0, 0, 0, .15);
+  --burger-color: #333;
+  --burger-line-border-radius: 0.1875em;
+  --burger-diameter: 2.125em;
+  --burger-btn-border-radius: calc(var(--burger-diameter) / 2);
+  --burger-line-transition: .3s;
+  --burger-transition: all .1s ease-in-out;
+  --burger-hover-scale: 1.1;
+  --burger-active-scale: .95;
+  --burger-enable-outline-color: var(--burger-bg);
+  --burger-enable-outline-width: 0.125em;
+  --burger-enable-outline-offset: var(--burger-enable-outline-width);
+  /* nav */
+  --nav-padding-x: 0.25em;
+  --nav-padding-y: 0.625em;
+  --nav-border-radius: 0.375em;
+  --nav-border-color: #ccc;
+  --nav-border-width: 0.0625em;
+  --nav-shadow-color: rgba(0, 0, 0, .2);
+  --nav-shadow-width: 0 1px 5px;
+  --nav-bg: #eee;
+  --nav-font-family: Menlo, Roboto Mono, monospace;
+  --nav-default-scale: .8;
+  --nav-active-scale: 1;
+  --nav-position-left: 0;
+  --nav-position-right: unset;
+  /* if you want to change sides just switch one property */
+  /* from properties to "unset" and the other to 0 */
+  /* title */
+  --nav-title-size: 0.625em;
+  --nav-title-color: #777;
+  --nav-title-padding-x: 1rem;
+  --nav-title-padding-y: 0.25em;
+  /* nav button */
+  --nav-button-padding-x: 1rem;
+  --nav-button-padding-y: 0.375em;
+  --nav-button-border-radius: 0.375em;
+  --nav-button-font-size: 12px;
+  --nav-button-hover-bg: #6495ed;
+  --nav-button-hover-text-color: #fff;
+  --nav-button-distance: 0.875em;
+  /* underline */
+  --underline-border-width: 0.0625em;
+  --underline-border-color: #ccc;
+  --underline-margin-y: 0.3125em;
+}
+
+/* popup settings 👆 */
+
+.popup[b-fmedpabp6h] {
+  display: inline-block;
+  text-rendering: optimizeLegibility;
+  position: relative;
+}
+
+.popup input[b-fmedpabp6h] {
+  display: none;
+}
+
+.burger[b-fmedpabp6h] {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: var(--burger-bg);
+  width: var(--burger-diameter);
+  height: var(--burger-diameter);
+  border-radius: var(--burger-btn-border-radius);
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: var(--burger-transition);
+  outline: var(--burger-enable-outline-width) solid transparent;
+  outline-offset: 0;
+}
+
+.burger span[b-fmedpabp6h] {
+  height: var(--burger-line-height);
+  width: var(--burger-line-width);
+  background: var(--burger-color);
+  border-radius: var(--burger-line-border-radius);
+  position: absolute;
+  transition: var(--burger-line-transition);
+}
+
+.burger span:nth-child(1)[b-fmedpabp6h] {
+  top: var(--burger-offset);
+}
+
+.burger span:nth-child(2)[b-fmedpabp6h] {
+  bottom: var(--burger-offset);
+}
+
+.burger span:nth-child(3)[b-fmedpabp6h] {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.popup-window[b-fmedpabp6h] {
+  transform: scale(var(--nav-default-scale));
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  padding: var(--nav-padding-y) var(--nav-padding-x);
+  background: var(--nav-bg);
+  font-family: var(--nav-font-family);
+  color: var(--nav-text-color);
+  border-radius: var(--nav-border-radius);
+  box-shadow: var(--nav-shadow-width) var(--nav-shadow-color);
+  border: var(--nav-border-width) solid var(--nav-border-color);
+  top: calc(var(--burger-diameter) + var(--burger-enable-outline-width) + var(--burger-enable-outline-offset));
+  left: var(--nav-position-left);
+  right: var(--nav-position-right);
+  transition: var(--burger-transition);
+}
+
+.popup-window legend[b-fmedpabp6h] {
+  padding: var(--nav-title-padding-y) var(--nav-title-padding-x);
+  margin: 0;
+  color: var(--nav-title-color);
+  font-size: var(--nav-title-size);
+  text-transform: uppercase;
+}
+
+.popup-window ul[b-fmedpabp6h] {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.popup-window ul button[b-fmedpabp6h] {
+  outline: none;
+  width: 100%;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  color: var(--burger-color);
+  font-size: var(--nav-button-font-size);
+  padding: var(--nav-button-padding-y) var(--nav-button-padding-x);
+  white-space: nowrap;
+  border-radius: var(--nav-button-border-radius);
+  cursor: pointer;
+  column-gap: var(--nav-button-distance);
+}
+
+.popup-window ul li:nth-child(1) svg[b-fmedpabp6h],
+.popup-window ul li:nth-child(2) svg[b-fmedpabp6h] {
+  color: cornflowerblue;
+}
+
+.popup-window ul li:nth-child(4) svg[b-fmedpabp6h],
+.popup-window ul li:nth-child(5) svg[b-fmedpabp6h] {
+  color: rgb(153, 153, 153);
+}
+
+.popup-window ul li:nth-child(7) svg[b-fmedpabp6h] {
+  color: red;
+}
+
+.popup-window hr[b-fmedpabp6h] {
+  margin: var(--underline-margin-y) 0;
+  border: none;
+  border-bottom: var(--underline-border-width) solid var(--underline-border-color);
+}
+
+/* actions */
+
+.popup-window ul button:hover[b-fmedpabp6h],
+.popup-window ul button:focus-visible[b-fmedpabp6h],
+.popup-window ul button:hover svg[b-fmedpabp6h],
+.popup-window ul button:focus-visible svg[b-fmedpabp6h] {
+  color: var(--nav-button-hover-text-color);
+  background: var(--nav-button-hover-bg);
+}
+
+.burger:hover[b-fmedpabp6h] {
+  transform: scale(var(--burger-hover-scale));
+}
+
+.burger:active[b-fmedpabp6h] {
+  transform: scale(var(--burger-active-scale));
+}
+
+.burger:focus:not(:hover)[b-fmedpabp6h] {
+  outline-color: var(--burger-enable-outline-color);
+  outline-offset: var(--burger-enable-outline-offset);
+}
+
+.popup input:checked+.burger span:nth-child(1)[b-fmedpabp6h] {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.popup input:checked+.burger span:nth-child(2)[b-fmedpabp6h] {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+.popup input:checked+.burger span:nth-child(3)[b-fmedpabp6h] {
+  transform: translateX(calc(var(--burger-diameter) * -1 - var(--burger-line-width)));
+}
+
+.popup input:checked~nav[b-fmedpabp6h] {
+  transform: scale(var(--nav-active-scale));
+  visibility: visible;
+  opacity: 1;
+}

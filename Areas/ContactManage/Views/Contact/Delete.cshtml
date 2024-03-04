@@ -1,0 +1,7 @@
+@model int
+
+<h1 class="alert alert-danger">Bạn có chắc muốn xóa bài viết không?</h1>
+<form method="post" asp-action="Delete" asp-route-id="@Model">
+    <input type="submit" class="btn btn-danger" value="Xóa"></input>
+</form>
+    <a style="margin-top: 10px;" class="btn btn-info" asp-action="Index">Quay lại</a>

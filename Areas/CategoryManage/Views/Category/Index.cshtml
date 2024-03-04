@@ -1,0 +1,84 @@
+@using CS68_MVC1.Models
+@using Microsoft.EntityFrameworkCore
+@model List<Category>
+@inject AppDbContext context
+<h1>Thông tin về các BLog</h1>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+<a asp-action="Create" class="btn btn-info">Thêm blog</a>
+<hr>
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Tác vụ</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+          PrintCategoryChildren(item);
+        }
+    </tbody>
+</table>
+@{
+     async Task  PrintCategoryChildren(Category category, int level = 1)
+    {
+        if (category.CategoryChildren != null)
+        {
+           string prefix="";
+           for(int i=1;i<=level;i++)
+           {
+                prefix+="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+            <tr>
+                    <td>
+                        @Html.Raw(prefix+"("+level+")" +" "+category.Title)
+                        @{
+                            var kq=(from c in context.categories join pc in context.postCategories
+                                    on c.Id equals pc.CategoryId where c.Id==category.Id select  pc).ToList();
+                            var kq2=(from pc in kq join p in context.posts 
+                                    on pc.PostId equals p.Id select p).ToList(); 
+                            @* join p in context.posts on c.Id equals *@
+                            <ul>
+                                @foreach(var item in kq2)
+                                {
+                                    <li>
+                                        <a asp-area="PostManage" asp-controller="Post" asp-action="Details" asp-route-id="@item.Id">
+                                            @item.Title
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        }
+                    </td>
+
+                    <td>
+                        <a asp-action="Details" asp-route-id="@category.Id" class="btn btn-primary">Xem chi tiết</a>
+                        <a asp-action="Delete" asp-route-id="@category.Id" class="btn btn-danger">Xóa</a>
+                        <a asp-action="Edit" asp-route-id="@category.Id" class="btn btn-info">Edit</a>
+                    </td>
+
+            </tr>               
+            @foreach (var item in category.CategoryChildren)
+                {
+                    context.Entry(item).Collection(i=>i.CategoryChildren).Load();
+                    PrintCategoryChildren(item, level + 1);                  
+                }
+        }
+    }
+}

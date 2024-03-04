@@ -1,0 +1,11 @@
+@model CS68_MVC1.Models.Contact
+
+<h1>Thông tin chi tiết</h1>
+<ul>
+  
+         <li class="text-danger"><strong>Người gửi: </strong>@Model.name</li>
+        <li><strong>Email: </strong>@Model.email</li>
+        <li><strong>Ngày gửi: </strong>@Model.DateSent</li>
+        <li><strong>Nội dung: </strong>@Model.content</li>
+</ul>
+    <a style="margin-top: 10px;" class="btn btn-info" asp-action="Index">Quay lại</a>

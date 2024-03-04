@@ -1,0 +1,75 @@
+@{
+    Layout = "_LayoutBlog";
+    List<Post> allPosts=ViewData["AllPost"] as List<Post>;
+    List<Post> toalPosts=ViewData["TotalPost"] as List<Post>;
+    ViewData["Id"]=ViewBag.Id;
+    ViewData["pageHienTai"]=ViewBag.pageHienTai;
+}
+@using CS68_MVC1.Components
+@model Category     
+@inject AppDbContext _context
+
+<style>
+
+    li{
+    list-style-type: none; /* Loại bỏ dấu chấm */
+    padding-left: 0; /* Xóa khoảng trống ở đầu danh sách */
+    }
+    a
+    {
+        color:black;
+        text-decoration: none;
+    }
+    a:hover
+    {
+        color:red;
+    }
+    li a:before {
+    content: ""; /* Loại bỏ nội dung trước mỗi mục danh sách */
+    }
+    p{
+        white-space: nowrap;
+        overflow: hidden; 
+        text-overflow: ellipsis;
+    }
+    img
+    {
+        width: 64px;
+        height: 64px;
+    }
+    .media
+    {
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+
+    @if(Model!=null)
+    {
+        <h3>@Model.Title</h3>
+    }
+    else
+    {
+        <h3>Tất cả bài viết</h3>
+    }
+
+    @foreach(var item in allPosts)
+    {
+        <div class="media">
+            <img class="mr-3" src="~/posts/sql.png" alt="Anh sql">
+            <div class="media-body">
+                <h5 class="mt-0"><a asp-area="PostManage" asp-controller="Post" asp-action="Details" asp-route-id="@item.Id">@item.Title</a></h5>
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            </div>
+        </div>
+        <hr>
+    }
+    <partial name="_Paging" model="@toalPosts"/>
+
+@section Sidebar
+{
+    <a asp-action="Index" asp-route-id="0">Tất cả chuyên mục</a>
+    <hr>
+    @await Component.InvokeAsync("CategorySidebar")    
+}

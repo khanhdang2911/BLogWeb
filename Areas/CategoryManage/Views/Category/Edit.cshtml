@@ -1,0 +1,29 @@
+@model CS68_MVC1.Models.Category
+@{
+    SelectList listItems=ViewData["ParentCategoryId"] as SelectList;
+}
+
+<form method="post" asp-action="Edit" asp-route-id="@Model.Id">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for ="Title" class="control-label" ></label>
+        <input type="text" asp-for="Title" class="form-control">
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for ="Content" class="control-label" ></label>
+        <input type="text" asp-for="Content" class="form-control">
+        <span asp-validation-for="Content" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ParentCategoryId" class="control-label">Danh mục cha</label>
+        <select asp-for="ParentCategoryId" class="form-control"  asp-items="@listItems"></select>
+        <span asp-validation-for="ParentCategoryId" class="text-danger"></span>>
+    </div>
+    <hr>
+    <input type="submit" class="btn btn-success">
+</form>
+<hr>
+<a asp-action="Index" class="btn btn-primary">Quay trở lại blog</a>

@@ -1,0 +1,14 @@
+@{
+    Layout="_Layout";
+}
+@inject CS68_MVC1.PlanetService planetService
+<div >
+
+<ul class="list-group">
+    @foreach(var i in planetService)
+    {
+        <a asp-action="@i.name" class="list-group-item">@i.name : @i.vnname</a>
+    }
+</ul>
+
+</div>

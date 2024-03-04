@@ -1,0 +1,40 @@
+@model List<Category> 
+@inject AppDbContext _context
+<ul>
+   
+    @foreach(var item in Model)
+    {
+       await PrintCategory(item);
+    }
+</ul>
+<style>
+    a{
+        text-decoration: none;
+        font-weight: 500;
+    }
+    a:hover{
+        color:red;
+    }
+    a:active{
+        color:rgb(79, 79, 211)
+    }
+</style>
+ @{
+        async Task PrintCategory(Category category,int level=1)
+        {
+            string prefix="";
+            for(int i=1;i<=level;i++)
+            {
+                prefix+="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+            <li>@Html.Raw(prefix)<a asp-area="CategoryManage" asp-controller="ViewPost" asp-action="Index" asp-route-id="@category.Id">@category.Title</a></li>
+            _context.Entry(category).Collection(p=>p.CategoryChildren).Load();
+            if(category.CategoryChildren!=null)
+            {
+                foreach(var item in category.CategoryChildren)
+                {
+                    PrintCategory(item,level+1);
+                }
+            }
+        }
+    }

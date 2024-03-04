@@ -1,0 +1,13 @@
+@{
+    Layout="_Layout";
+}
+@model PlanetModel
+<div class="card" style="width: 50%;">
+  <img class="card-img-top" src="~/planet/@(Model.name).jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">@Model.name - @Model.vnname</h5>
+    <p class="card-text">@Model.content</p>
+    <a asp-controller="Planet" asp-action="Index" class="btn btn-primary">Các hành tinh</a>
+  </div>
+</div>
+@Url.RouteUrl("neptune1")

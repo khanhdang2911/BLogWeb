@@ -1,0 +1,8 @@
+
+@{
+    var status=TempData["StatusMessage"] as string;
+}
+@if(!string.IsNullOrEmpty(status))
+{
+    <h3 class="alert alert-info">@status</h3>
+}

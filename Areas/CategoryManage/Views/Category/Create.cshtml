@@ -1,0 +1,32 @@
+@model CS68_MVC1.Models.Category
+@{
+    @* SelectList listItems=ViewData["ParentCategoryId"] as SelectList; *@
+}
+<h1>Thêm Blog</h1>
+<form method="post" asp-action="Create">
+     <div asp-validation-summary="ModelOnly"></div>
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <label asp-for="Title" class="control-label"></label>
+        <input asp-for="Title" class="form-control" name="Title">
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Content" class="control-label"></label>
+        <input asp-for="Content" class="form-control" name="Content">
+        <span asp-validation-for="Content" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ParentCategoryId" class="control-label">Danh mục cha</label>
+        <select asp-for="ParentCategoryId" class="form-control"  asp-items="ViewBag.ParentCategoryId"></select>
+        <span asp-validation-for="ParentCategoryId" class="text-danger"></span>
+    </div>
+    <hr>
+    <input type="submit" value="Create" class="btn btn-info">
+</form>
+
+
+ @section scripts{
+        <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    }

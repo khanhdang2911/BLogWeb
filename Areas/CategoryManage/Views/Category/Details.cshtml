@@ -1,0 +1,14 @@
+@model CS68_MVC1.Models.Category
+<h1>Thông tin blog</h1>
+<ul>
+    <li>Title: @Model.Title</li>
+    <li>Content: @Model.Content</li>
+    @if(Model.ParentCategory!=null)
+    {
+        <li>Danh mục cha:@Model.ParentCategory.Title</li>
+    }
+    else
+    {
+        <li>Danh mục cha:không có</li>
+    }
+</ul>

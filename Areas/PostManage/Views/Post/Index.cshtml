@@ -1,0 +1,31 @@
+@using CS68_MVC1.Models
+@model List<Post>
+
+<h1 class="alert alert-success">Các bài post</h1>
+<partial name="_StatusMessage"/>
+<a asp-action="Create" class='btn btn-info'>Tạo bài viết mới</a>
+<hr>
+<table>
+    <tr>
+        <th style="border: 1px solid black; padding: 8px;">Tiêu đề</th>
+        <th style="border: 1px solid black; padding: 8px;">Ngày gửi</th>
+        <th style="border: 1px solid black; padding: 8px;">Tác vụ</th>
+
+        
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td style="border: 1px solid black; padding: 8px;">@item.Title</td>
+            <td style="border: 1px solid black; padding: 8px;">@item.DateCreated</td>
+            
+            <td style="border: 1px solid black; padding: 8px;">
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Xem chi tiết</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Xóa</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">Edit</a>
+             </td>
+        
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,13 @@
+
+@using CS68_MVC1
+@model List<ProductViewModel> 
+
+<h1>
+    Các sản phẩm
+</h1>
+<ul>
+    @foreach(var sp in Model)
+    {
+        <li>@sp.name -- @sp.price</li>
+    }
+</ul>

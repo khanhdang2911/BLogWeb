@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CS68_MVC1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CS68_MVC1.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CS68_MVC1</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Planet" asp-action="Index">Planet</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="ContactManage" asp-controller="Contact" asp-action="Create">Gửi liên hệ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="CategoryManage" asp-controller="Category" asp-action="Index">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="PostManage" asp-controller="Post" asp-action="Index">Bài post</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="CategoryManage" asp-controller="ViewPost" asp-action="Index">Blog and post</a>
+                        </li>
+                    </ul>
+
+                    @*  *@
+                    <div class="dropmenu">
+                        <label class="popup">
+                        <input type="checkbox">
+                        <div class="burger" tabindex="0">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <nav class="popup-window">
+                            <legend>Actions</legend>
+                            <ul>
+                            <li>
+                                <button>
+                                <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="14" width="14" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle r="4" cy="7" cx="9"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <span><a asp-area="ContactManage" asp-controller="Contact" asp-action="Index" style="text-decoration: none; color:black;">Liên hệ</a></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="14" width="14" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                </svg>
+                                <span>Magic Link</span>
+                                </button>
+                            </li>
+                            <hr>
+                            <li>
+                                <button>
+                                <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="14" width="14" xmlns="http://www.w3.org/2000/svg">
+                                    <rect ry="2" rx="2" height="13" width="13" y="9" x="9"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                                <span>Clone</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="14" width="14" xmlns="http://www.w3.org/2000/svg">
+                                    <polygon points="16 3 21 8 8 21 3 21 3 16 16 3"></polygon>
+                                </svg>
+                                <span>Edit</span>
+                                </button>
+                            </li>
+                            <hr>
+                            <li>
+                                <button>
+                                <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="14" width="14" xmlns="http://www.w3.org/2000/svg">
+                                    <line y2="18" x2="6" y1="6" x1="18"></line>
+                                    <line y2="18" x2="18" y1="6" x1="6"></line>
+                                </svg>
+                                <span>Delete</span>
+                                </button>
+                            </li>
+                            </ul>
+                        </nav>
+                        </label>
+                    </div>
+
+                    @* <div class="paste-button">
+                        <button class="button">Admin &nbsp; ▼</button>
+                        <div class="dropdown-content">
+                            <a asp-area="ContactManage" asp-controller="Contact" asp-action="Index" class="top">Liên hệ</a>
+                            <a id="middle" href="#">Merge formatting</a>
+                            <a id="bottom" href="#">Keep text only</a>
+                        </div>
+                    </div> *@
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - CS68_MVC1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

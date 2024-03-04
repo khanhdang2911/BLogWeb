@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<partial name="_AlertStatusMessage"/>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<p>
+    @Url.Action()  
+</p>
+ <p>@Url.ActionLink()</p>
+
+<p>@Url.Action("Privacy")</p> 
+
+<p>@Url.Action("Earth", "Planet", new{id=3,name="xuankhanh"})</p>
+<p>@Url.Action("Index","Product",new{area="ProductManage"})</p>
+
+<p>@Url.RouteUrl("default",new{action="Privacy",controller="Home"})</p>
+
+<a asp-action="PlanetInfo" asp-controller="Planet" asp-route-id="2">hanh tinh 2</a>

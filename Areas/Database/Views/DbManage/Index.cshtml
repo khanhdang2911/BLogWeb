@@ -1,0 +1,14 @@
+@using CS68_MVC1.Migrations
+@inject AppDbContext dbcontext
+<h1>Thông tin cơ bản về DbManage</h1>
+@{
+    var status=TempData["StatusMessage"] as string;
+}
+<partial name="_StatusMessage" />
+<a asp-action="DeleteDb" class="btn btn-danger">Xóa Database</a>
+<hr>
+<form method="post">
+    <a asp-action="CreateDb" class="btn btn-success">Tạo Database</a>
+</form>
+
+

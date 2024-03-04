@@ -1,0 +1,223 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CS68_MVC1
+build_property.RootNamespace = CS68_MVC1
+build_property.ProjectDir = D:\CSharp 2023\CS70_MVC3 - EF\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\CSharp 2023\CS70_MVC3 - EF
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/CategoryManage/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2F0ZWdvcnlNYW5hZ2VcVmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/CategoryManage/Views/Category/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2F0ZWdvcnlNYW5hZ2VcVmlld3NcQ2F0ZWdvcnlcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/CategoryManage/Views/Category/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2F0ZWdvcnlNYW5hZ2VcVmlld3NcQ2F0ZWdvcnlcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/CategoryManage/Views/Category/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2F0ZWdvcnlNYW5hZ2VcVmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/CategoryManage/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2F0ZWdvcnlNYW5hZ2VcVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/CategoryManage/Views/Shared/_StatusMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2F0ZWdvcnlNYW5hZ2VcVmlld3NcU2hhcmVkXF9TdGF0dXNNZXNzYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/CategoryManage/Views/ViewPost/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2F0ZWdvcnlNYW5hZ2VcVmlld3NcVmlld1Bvc3RcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/CategoryManage/Views/ViewPost/_LayoutBlog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2F0ZWdvcnlNYW5hZ2VcVmlld3NcVmlld1Bvc3RcX0xheW91dEJsb2cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/CategoryManage/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2F0ZWdvcnlNYW5hZ2VcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/CategoryManage/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2F0ZWdvcnlNYW5hZ2VcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/ContactManage/Views/Contact/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udGFjdE1hbmFnZVxWaWV3c1xDb250YWN0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/ContactManage/Views/Contact/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udGFjdE1hbmFnZVxWaWV3c1xDb250YWN0XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/ContactManage/Views/Contact/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udGFjdE1hbmFnZVxWaWV3c1xDb250YWN0XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/ContactManage/Views/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udGFjdE1hbmFnZVxWaWV3c1xDb250YWN0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/ContactManage/Views/Shared/_StatusMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udGFjdE1hbmFnZVxWaWV3c1xTaGFyZWRcX1N0YXR1c01lc3NhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/ContactManage/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udGFjdE1hbmFnZVxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/ContactManage/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udGFjdE1hbmFnZVxWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/Database/Views/DbManage/DeleteDb.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGF0YWJhc2VcVmlld3NcRGJNYW5hZ2VcRGVsZXRlRGIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/Database/Views/DbManage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGF0YWJhc2VcVmlld3NcRGJNYW5hZ2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/Database/Views/Shared/_StatusMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGF0YWJhc2VcVmlld3NcU2hhcmVkXF9TdGF0dXNNZXNzYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/Database/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGF0YWJhc2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/Database/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGF0YWJhc2VcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/PostManage/Views/Post/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUG9zdE1hbmFnZVxWaWV3c1xQb3N0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/PostManage/Views/Post/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUG9zdE1hbmFnZVxWaWV3c1xQb3N0XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/PostManage/Views/Post/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUG9zdE1hbmFnZVxWaWV3c1xQb3N0XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/PostManage/Views/Post/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUG9zdE1hbmFnZVxWaWV3c1xQb3N0XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/PostManage/Views/Post/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUG9zdE1hbmFnZVxWaWV3c1xQb3N0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/PostManage/Views/Shared/_StatusMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUG9zdE1hbmFnZVxWaWV3c1xTaGFyZWRcX1N0YXR1c01lc3NhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/PostManage/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUG9zdE1hbmFnZVxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/PostManage/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUG9zdE1hbmFnZVxfVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/ProductManage/Shared/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZVxTaGFyZWRcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/ProductManage/Shared/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZVxTaGFyZWRcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Areas/ProductManage/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZVxWaWV3c1xQcm9kdWN0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/MyView/xinchao1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = TXlWaWV3XHhpbmNoYW8xLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/MyView/xinchao2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = TXlWaWV3XHhpbmNoYW8yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Views/First/HelloView2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlyc3RcSGVsbG9WaWV3Mi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Views/First/ProductView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlyc3RcUHJvZHVjdFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Views/Planet/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbmV0XERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Views/Planet/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbmV0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Views/Shared/Components/CategorySidebar/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2F0ZWdvcnlTaWRlYmFyXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Views/Shared/_AlertStatusMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BbGVydFN0YXR1c01lc3NhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Views/Shared/_Paging.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-fmedpabp6h

@@ -1,0 +1,48 @@
+@inject AppDbContext _context
+@using CS68_MVC1.Models
+@model List<Post>
+@{
+    int tongsoBai=Model.Count;
+    int SoTrang=(int)Math.Ceiling((double)tongsoBai/3);
+    List<int> pages=new List<int>();
+    for(int j=1;j<=SoTrang;j++)
+    {
+        pages.Add(j);
+    }
+    var Id=ViewData["Id"];//Id của category
+    var pageHienTai=ViewData["pageHienTai"];
+    
+}
+
+
+
+<nav aria-label="...">
+  <ul class="pagination">
+
+    <li class="page-item">
+      <a class="page-link" asp-area="CategoryManage" asp-controller="ViewPost" asp-action="Index" asp-route-id="@Id" asp-route-page="1">Trang đầu</a>
+    </li>
+
+    @for(int i=1;i<=SoTrang;i++)
+    {
+        if(i==(int)pageHienTai)
+        {
+            <li class="page-item active">
+                <a class="page-link" asp-area="CategoryManage" asp-controller="ViewPost" asp-action="Index" asp-route-id="@Id" asp-route-page="@i">@i</a>
+            </li>
+        }
+        else
+        {
+            <li class="page-item ">
+                <a class="page-link" asp-area="CategoryManage" asp-controller="ViewPost" asp-action="Index" asp-route-id="@Id" asp-route-page="@i">@i</a>
+            </li>
+        }
+    }
+
+
+    <li class="page-item">
+      <a class="page-link" asp-area="CategoryManage" asp-controller="ViewPost" asp-action="Index" asp-route-id="@Id" asp-route-page="@SoTrang">Trang cuối</a>
+    </li>
+
+  </ul>
+</nav>
