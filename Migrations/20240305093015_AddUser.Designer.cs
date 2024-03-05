@@ -4,6 +4,7 @@ using CS68_MVC1;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CS68_MVC1.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240305093015_AddUser")]
+    partial class AddUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -117,22 +120,6 @@ namespace CS68_MVC1.Migrations
                     b.ToTable("PostCategory");
                 });
 
-            modelBuilder.Entity("CS68_MVC1.Models.RoleClaim", b =>
-                {
-                    b.Property<int>("UserID")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ClaimTypes")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("ClaimName")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("UserID", "ClaimTypes", "ClaimName");
-
-                    b.ToTable("roleClaims");
-                });
-
             modelBuilder.Entity("CS68_MVC1.Models.UserModel", b =>
                 {
                     b.Property<int>("Id")
@@ -182,17 +169,6 @@ namespace CS68_MVC1.Migrations
                     b.Navigation("Post");
                 });
 
-            modelBuilder.Entity("CS68_MVC1.Models.RoleClaim", b =>
-                {
-                    b.HasOne("CS68_MVC1.Models.UserModel", "User")
-                        .WithMany("RoleClaims")
-                        .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("CS68_MVC1.Models.Category", b =>
                 {
                     b.Navigation("CategoryChildren");
@@ -203,11 +179,6 @@ namespace CS68_MVC1.Migrations
             modelBuilder.Entity("CS68_MVC1.Models.Post", b =>
                 {
                     b.Navigation("PostCategories");
-                });
-
-            modelBuilder.Entity("CS68_MVC1.Models.UserModel", b =>
-                {
-                    b.Navigation("RoleClaims");
                 });
 #pragma warning restore 612, 618
         }

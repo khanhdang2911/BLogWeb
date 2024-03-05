@@ -1,0 +1,24 @@
+@model CS68_MVC1.Models.UserModel
+
+<form method="post" asp-action="Register" asp-controller="Login">
+     <div asp-validation-summary="ModelOnly"></div>
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <label asp-for="UserName" class="control-label"></label>
+        <input asp-for="UserName" class="form-control">
+        <span asp-validation-for="UserName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PassWord" class="control-label"></label>
+        <input asp-for="PassWord" class="form-control" type="password">
+        <span asp-validation-for="PassWord" class="text-danger"></span>
+    </div>
+    <hr>
+    <input type="submit" value="Register" class="btn btn-info">
+</form>
+
+
+ @section scripts{
+        <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    }

@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http
+
+@inject IHttpContextAccessor HttpContextAccessor
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -41,6 +44,25 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="CategoryManage" asp-controller="ViewPost" asp-action="Index">Blog and post</a>
                         </li>
+                        @if (HttpContextAccessor.HttpContext.User.Identity.IsAuthenticated)
+                        {
+                            <p>Xin chào, @HttpContextAccessor.HttpContext.User.Claims.FirstOrDefault(c => c.Type == "Name").Value
+!</p>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Logout">Log out</a>
+                            </li>
+                        }
+                        @if (!HttpContextAccessor.HttpContext.User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Register">Register</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="DangNhap">Login</a>
+                            </li>
+                        }
+                        
                     </ul>
 
                     @*  *@

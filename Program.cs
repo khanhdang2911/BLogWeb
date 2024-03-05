@@ -1,4 +1,5 @@
 using CS68_MVC1;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing.Constraints;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +16,17 @@ builder.Services.AddDbContext<AppDbContext>(options =>
             string connectString = builder.Configuration.GetConnectionString("MyBlogContext");
             options.UseSqlServer(connectString);
         });
+//Cokie login
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath="/Login/DangNhap";
+        // options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+        // options.SlidingExpiration = true;
+        options.AccessDeniedPath = "/Login/Forbidden/";
+    });
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
 var app = builder.Build();
 // builder.Services.AddRazorPages();
 // Configure the HTTP request pipeline.

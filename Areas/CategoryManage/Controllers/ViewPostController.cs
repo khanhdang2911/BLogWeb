@@ -3,8 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore; // Đảm bảo đã import namespace này
 using System.Linq;
 using CS68_MVC1.Models;
+using Microsoft.AspNetCore.Authorization;
 namespace CS68_MVC1.Controllers
 {
+    [Authorize(Roles="Admin")]
     [Area("CategoryManage")]
     [Route("/View-post/[action]")]
     public class ViewPostController:Controller
