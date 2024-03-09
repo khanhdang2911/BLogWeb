@@ -190,6 +190,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRm9yYmlkZGVuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/CSharp 2023/CS70_MVC3 - EF/Views/Login/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRm9yZ290UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CSharp 2023/CS70_MVC3 - EF/Views/Login/ForgotPasswordConfirmCode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRm9yZ290UGFzc3dvcmRDb25maXJtQ29kZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/CSharp 2023/CS70_MVC3 - EF/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

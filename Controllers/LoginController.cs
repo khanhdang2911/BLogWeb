@@ -5,10 +5,17 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
+using MailKit.Net.Smtp;
+using MailKit;
+using MimeKit;
+
 namespace CS68_MVC1.Controllers
 {
     public class LoginController:Controller
     {
+
+        public static int _randomCode{set;get;}
+        public static string usernameEnter{set;get;}
         private readonly AppDbContext _context;
         
         public LoginController(AppDbContext context)
@@ -117,5 +124,77 @@ namespace CS68_MVC1.Controllers
         {
             return View();
         }
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult ForgotPasswordConfirmCode(string code)
+        {
+            if(string.IsNullOrEmpty(code))
+            {
+                ModelState.AddModelError("","Phải nhập code để xác nhận");
+                return View();
+            }
+            
+
+            else if(int.Parse(code)!=_randomCode)
+            {
+                Console.WriteLine(code+"  "+_randomCode);
+                ModelState.AddModelError("","Code bạn nhập không đúng, vui lòng kiểm tra lại");
+                return View();
+            }
+            var user=_context.users.Where(u=>u.UserName==usernameEnter).FirstOrDefault();
+            user.PassWord="123456789qwe";
+            _context.SaveChangesAsync();
+            return RedirectToAction("DangNhap");
+        }
+        [HttpPost]
+        public IActionResult ForgotPasswordEnter(string? username)
+        {
+            if(string.IsNullOrEmpty(username))
+            {
+                ModelState.AddModelError("","Phải nhập username của bạn");
+                return RedirectToAction("ForgotPassword");
+            }
+            // Console.WriteLine(username);
+            var user=_context.users.Where(u=>u.UserName==username).FirstOrDefault();
+            if(user==null)
+            {
+            Console.WriteLine("sai user");
+                ModelState.AddModelError("","Username không tồn tại");
+                return RedirectToAction("ForgotPassword");
+            }
+            usernameEnter=username;
+            Random rnd = new Random();
+            int randomCode=rnd.Next(100000,999999);
+            _randomCode=randomCode;
+             var email = new MimeMessage();
+
+            email.From.Add(new MailboxAddress("khanhdang", "khanhdang3152@gmail.com"));
+            email.To.Add(new MailboxAddress("thangdang", "khanhdangco2911@gmail.com"));
+
+            email.Subject = "Testing out email sending";
+            email.Body = new TextPart(MimeKit.Text.TextFormat.Html) { 
+                Text = $"<b>Ma code cua ban la {_randomCode}</b>"};
+            Console.WriteLine("Ma code:"+_randomCode);
+
+            using (var smtp = new SmtpClient())
+            {
+                smtp.Connect("smtp.gmail.com", 587, false);
+
+                // Note: only needed if the SMTP server requires authentication
+                smtp.Authenticate("khanhdang3152@gmail.com", "tlol kfvg mubs yyyl");
+
+                smtp.Send(email);
+                smtp.Disconnect(true);
+            }
+            Console.WriteLine("da toi buoc nay roi nay");
+            
+           
+
+            return View("ForgotPasswordConfirmCode",(object)randomCode);
+        }
+        
     }
 }
